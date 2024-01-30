@@ -1,0 +1,141 @@
+#sl_tp {
+  position: fixed;
+  top: 0;
+  -webkit-transition-duration: 0.3s;
+  -moz-transition-duration: 0.3s;
+  -o-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  background: rgb(16, 15, 15);
+  width: 100%;
+  height: 30px;
+  box-shadow: 0 0 5px #777;
+  text-align: center;
+  color: #fff;
+}
+
+#sl_in {
+  position: fixed;
+  min-height: 41px;
+  top: -230px;
+  -webkit-transition-duration: 0.1s;
+  -moz-transition-duration: 0.1s;
+  -o-transition-duration: 0.1s;
+  transition-duration: 0.1s;
+  background: #4646468d;
+  width: 100%;
+  padding: 10px;
+  box-sizing: padding-box;
+}
+#sl_tp:hover {
+  top: 60px;
+}
+#sl_tp:hover #sl_in {
+  top: 0;
+}
+
+#line_block {
+  display: inline-block;
+  width: 250px;
+  height: 300px;
+  margin: 0 15px 15px 0;
+  text-align: center;
+  padding: 10px;
+}
+
+#info {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.center {
+  background-color: #90717142;
+  width: 1155px;
+  height: 300px;
+  margin: 0 2px 15px 0;
+  text-align: center;
+  padding: 10px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.header a {
+  display: inline-block;
+  padding: 10px;
+  color: #fff;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  text-decoration: none;
+}
+
+.header a:after {
+  display: block; /*превращаем его в блочный элемент*/
+  content: ""; /*контента в данном блоке не будет поэтому в кавычках ничего не ставим*/
+  height: 3px; /*задаём высоту линии*/
+  width: 0%; /*задаём начальную ширину элемента (линии)*/
+  background-color: #9c8585; /*цвет фона элемента*/
+  transition: width 0.4s ease-in-out; /*данное свойство отвечает за плавное изменение ширины. Здесь можно задать время анимации в секундах (в данном случае задано 0.4 секунды)*/
+}
+
+.header a:hover:after,
+a:focus:after {
+  width: 100%;
+}
+a:hover {
+  color: #ffe1e1;
+}
+
+body,
+html {
+  height: 90%;
+}
+
+.paral {
+  background-position: center;
+  background-attachment: fixed;
+  background-size: cover;
+
+  background-image: url(src/img/473.jpg);
+
+  height: 10%;
+}
+
+.hover-image-scale {
+  display: inline-block;
+  overflow: hidden; /* Скрываем всё за контуром */
+}
+.hover-image-scale img {
+  transition: 1s; /* Время эффекта */
+  display: block;
+}
+.hover-image-scale img:hover {
+  transform: scale(1.2); /* Увеличиваем масштаб */
+}
+
+.img__description {
+  position: sticky;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: large;
+  background: rgba(0, 0, 0, 0.72);
+  color: #ffe1e1;
+  text-decoration: none;
+  visibility: collapse;
+  opacity: 0;
+  /* transition effect. not necessary */
+  transition: opacity 0.2s, visibility 0.2s;
+}
+.al {
+  text-decoration: none;
+}
+.hover-image-scale:hover .img__description {
+  visibility: visible;
+  opacity: 1;
+}
